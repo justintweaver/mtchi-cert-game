@@ -726,5 +726,16 @@
             "game": 6,
             "widget": "participation"
         }
-    }
+    },
+    {
+	    "pk": 114,
+	    "model": "challenge_mgr.pagesetting",
+	    "fields": {
+	        "priority": 2,
+	        "widget": "hello_world",
+	        "enabled": true,
+	        "page": 8,
+	        "location": "Left"
+	    }
+	}
 ]
