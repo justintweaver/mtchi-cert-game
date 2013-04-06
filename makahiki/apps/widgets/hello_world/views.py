@@ -9,6 +9,7 @@ def supply(request, page_name):
     name = profile.name
     team = profile.team
     points = score_mgr.player_points(profile)
+    
     return {
         "name": name,
         "team": team,

@@ -1,0 +1,28 @@
+<div class="content-box">
+    <div class="content-box-title">
+        Group Scores
+        <a href="#" style="float: right">
+			<img src="{{ STATIC_URL}}images/icons/icon-help-sm.png" width="20" align="center" title="Click to get help about this window" onclick="toggleHelp(event, ’widget’, ’hello-world’); return false;" />
+		</a>
+    </div>
+    <div class="content-box-contents">
+    	{% if view_objects.group_scoreboard.group_scores %}
+    	<table class="table">
+    		<thead>
+    			<tr>
+    				<td>Group</td>
+    				<td>Score</td>
+    			</tr>
+    		</thead>
+    		<tbody>
+        	{% for group_score in view_objects.group_scoreboard.group_scores %}
+        		<tr>
+        			<td>{{ group_score.0 }}</td>
+        			<td>{{ group_score.1 }}</td>
+        		</tr>
+        	{% endfor %}
+        	</tbody>
+        </table>
+        {% endif %}
+    </div>
+</div>

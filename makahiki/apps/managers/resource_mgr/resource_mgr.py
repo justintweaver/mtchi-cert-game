@@ -46,6 +46,15 @@ def team_resource_usage(date, team, resource):
         return energy_data.usage
     else:
         return 0
+    
+def group_resource_usage(date, group, resource):
+    """Returns the latest usage of the specified resource for the current date for the given group."""
+    group_usage = 0    
+    for team in Team.objects.all():
+        if team.group == group:
+            group_usage += team_resource_usage(date, team, resource)
+    
+    return group_usage
 
 
 def update_team_resource_usage(resource, session, date, team, storage):

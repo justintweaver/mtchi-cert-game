@@ -10,6 +10,9 @@ from apps.managers.score_mgr.models import ScoreboardEntry, PointsTransaction, S
 from apps.managers.cache_mgr import cache_mgr
 
 
+
+
+
 def info():
     """returns the score_mgr info."""
     s = score_setting()
@@ -390,6 +393,20 @@ def team_points(team, round_name=None):
     dictionary = ScoreboardEntry.objects.filter(profile__team=team,
                                                 round_name=round_name).aggregate(Sum("points"))
     return dictionary["points__sum"] or 0
+
+
+def group_points(group, round_name=None):
+    """Returns the total number of points for the team.  Optional parameter for a round."""
+    if not round_name:
+        round_name = challenge_mgr.get_round_name()
+        
+    group_total_points = 0    
+    scores = ScoreboardEntry.objects.all().filter(round_name=round_name)
+    for score in scores:
+        if score.profile.team.group == group:
+            group_total_points += score.points
+            
+    return group_total_points
 
 
 def team_points_leader(round_name=None):

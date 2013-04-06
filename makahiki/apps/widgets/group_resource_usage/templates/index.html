@@ -1,0 +1,32 @@
+<div class="content-box">
+    <div class="content-box-title">
+        Group Resource Usage
+        <a href="#" style="float: right">
+			<img src="{{ STATIC_URL }}images/icons/icon-help-sm.png" width="20" align="center" title="Click to get help about this window" onclick="toggleHelp(event, ’widget’, ’hello-world’); return false;" />
+		</a>
+    </div>
+    <div class="content-box-contents">
+    	{% if view_objects.group_scoreboard.group_scores %}
+    	<table class="table">
+    		<thead>
+              <tr>
+                {% for header in view_objects.group_resource_usage.header_row %}
+                <td>{{ header|capfirst }}</td>
+                {% endfor %}    				
+    			</tr>
+    		</thead>
+        
+    		<tbody>
+        	{% for body_row in view_objects.group_resource_usage.body_rows %}
+        		<tr>
+                  {% for field in body_row %}
+                  <td>{{ field }}</td>
+                  {% endfor %}
+        		</tr>
+        	{% endfor %}
+        	</tbody>
+          
+        </table>
+        {% endif %}
+    </div>
+</div>

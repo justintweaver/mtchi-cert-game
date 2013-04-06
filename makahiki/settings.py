@@ -199,6 +199,8 @@ INSTALLED_WIDGET_APPS = (
     'quests',
     'raffle',
     'scoreboard',
+    'group_scoreboard',
+    'group_resource_usage',
     'participation',
     'smartgrid',
     'team_members',
