@@ -246,6 +246,7 @@ INSTALLED_THEMES = (
     'theme-sonora',
     'theme-space',
     'theme-wave',
+    'theme-mtc',
 )
 
 
