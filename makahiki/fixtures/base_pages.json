@@ -13,42 +13,16 @@
         }
     },
     {
-        "pk": 2,
+        "pk": 12,
         "model": "challenge_mgr.pageinfo",
         "fields": {
-            "name": "learn",
-            "title": "Get Nutz",
-            "introduction": "* Play the Game\r\n* Earn Kukuicup points\r\n* See where you stand",
-            "label": "Get Nutz",
+            "name": "questions",
+            "title": "5 Questions",
+            "introduction": "* Answer questions\r\n* Earn points\r\n* Improve MTC knowledge",
+            "label": "5 Questions",
             "priority": 2,
-            "url": "/learn",
-            "unlock_condition": "True"
-        }
-    },
-    {
-        "pk": 3,
-        "model": "challenge_mgr.pageinfo",
-        "fields": {
-            "name": "energy",
-            "title": "Go Low",
-            "introduction": "* Observe Energy use\r\n* Track Energy goals\r\n* Compare usage to others",
-            "label": "Go Low",
-            "priority": 3,
-            "url": "/energy",
-            "unlock_condition": "game_enabled('Energy Game')"
-        }
-    },
-    {
-        "pk": 4,
-        "model": "challenge_mgr.pageinfo",
-        "fields": {
-            "name": "water",
-            "title": "Drop Down",
-            "introduction": "* Observe Water use\r\n* Track Water goals\r\n* Compare usage to others",
-            "label": "Drop Down",
-            "priority": 4,
-            "url": "/water",
-            "unlock_condition": "game_enabled('Water Game')"
+            "url": "/fivequestions",
+            "unlock_condition": "is_admin()"
         }
     },
     {
@@ -61,19 +35,6 @@
             "label": "News",
             "priority": 6,
             "url": "/news",
-            "unlock_condition": "True"
-        }
-    },
-    {
-        "pk": 7,
-        "model": "challenge_mgr.pageinfo",
-        "fields": {
-            "name": "win",
-            "title": "Prizes",
-            "introduction": "* See the prizes\r\n* Allocate your points\r\n* Monitor your chances",
-            "label": "Prizes",
-            "priority": 7,
-            "url": "/win",
             "unlock_condition": "True"
         }
     },
@@ -139,127 +100,6 @@
         }
     },
     {
-        "pk": 20,
-        "model": "challenge_mgr.pagesetting",
-        "fields": {
-            "widget": "smartgrid",
-            "location": "Left",
-            "priority": 1,
-            "enabled": true,
-            "page": 2
-        }
-    },
-    {
-        "pk": 21,
-        "model": "challenge_mgr.pagesetting",
-        "fields": {
-            "widget": "upcoming_events",
-            "location": "Left",
-            "priority": 2,
-            "enabled": true,
-            "page": 2
-        }
-    },
-    {
-        "pk": 22,
-        "model": "challenge_mgr.pagesetting",
-        "fields": {
-            "widget": "participation",
-            "location": "Right",
-            "priority": 2,
-            "enabled": true,
-            "page": 2
-        }
-    },
-    {
-        "pk": 23,
-        "model": "challenge_mgr.pagesetting",
-        "fields": {
-            "widget": "scoreboard",
-            "location": "Right",
-            "priority": 1,
-            "enabled": true,
-            "page": 2
-        }
-    },
-    {
-        "pk": 30,
-        "model": "challenge_mgr.pagesetting",
-        "fields": {
-            "widget": "resource_goal.energy",
-            "location": "Left",
-            "priority": 1,
-            "enabled": true,
-            "page": 3
-        }
-    },
-    {
-        "pk": 31,
-        "model": "challenge_mgr.pagesetting",
-        "fields": {
-            "widget": "energy_power_meter",
-            "location": "Right",
-            "priority": 1,
-            "enabled": true,
-            "page": 3
-        }
-    },
-    {
-        "pk": 32,
-        "model": "challenge_mgr.pagesetting",
-        "fields": {
-            "widget": "resource_scoreboard.energy",
-            "location": "Right",
-            "priority": 2,
-            "enabled": true,
-            "page": 3
-        }
-    },
-    {
-        "pk": 33,
-        "model": "challenge_mgr.pagesetting",
-        "fields": {
-            "widget": "wallpost.user_wallpost",
-            "location": "Left",
-            "priority": 2,
-            "enabled": true,
-            "page": 3
-        }
-    },
-    {
-        "pk": 40,
-        "model": "challenge_mgr.pagesetting",
-        "fields": {
-            "widget": "wallpost.user_wallpost",
-            "location": "Left",
-            "priority": 2,
-            "enabled": true,
-            "page": 4
-        }
-    },
-    {
-        "pk": 41,
-        "model": "challenge_mgr.pagesetting",
-        "fields": {
-            "widget": "resource_scoreboard.water",
-            "location": "Right",
-            "priority": 1,
-            "enabled": true,
-            "page": 4
-        }
-    },
-    {
-        "pk": 42,
-        "model": "challenge_mgr.pagesetting",
-        "fields": {
-            "widget": "resource_goal.water",
-            "location": "Left",
-            "priority": 1,
-            "enabled": true,
-            "page": 4
-        }
-    },
-    {
         "pk": 60,
         "model": "challenge_mgr.pagesetting",
         "fields": {
@@ -312,28 +152,6 @@
             "priority": 1,
             "enabled": true,
             "page": 6
-        }
-    },
-    {
-        "pk": 70,
-        "model": "challenge_mgr.pagesetting",
-        "fields": {
-            "widget": "prizes",
-            "location": "Left",
-            "priority": 1,
-            "enabled": true,
-            "page": 7
-        }
-    },
-    {
-        "pk": 71,
-        "model": "challenge_mgr.pagesetting",
-        "fields": {
-            "widget": "raffle",
-            "location": "Right",
-            "priority": 1,
-            "enabled": true,
-            "page": 7
         }
     },
     {
@@ -726,16 +544,5 @@
             "game": 6,
             "widget": "participation"
         }
-    },
-    {
-	    "pk": 114,
-	    "model": "challenge_mgr.pagesetting",
-	    "fields": {
-	        "priority": 2,
-	        "widget": "hello_world",
-	        "enabled": true,
-	        "page": 8,
-	        "location": "Left"
-	    }
-	}
+    }
 ]

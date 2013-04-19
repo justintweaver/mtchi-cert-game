@@ -238,14 +238,6 @@ INSTALLED_APPS += ('south', 'django_nose',)
 # INSTALLED Themes. Please keep them in alphabetical order
 ##########################################################
 INSTALLED_THEMES = (
-    'theme-bubbles',
-    'theme-bumblebee',
-    'theme-forest',
-    'theme-google',
-    'theme-hpu',
-    'theme-sonora',
-    'theme-space',
-    'theme-wave',
     'theme-mtc',
 )
 
