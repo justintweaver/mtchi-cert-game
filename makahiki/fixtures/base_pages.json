@@ -13,7 +13,7 @@
         }
     },
     {
-        "pk": 12,
+        "pk": 2,
         "model": "challenge_mgr.pageinfo",
         "fields": {
             "name": "questions",
@@ -21,8 +21,8 @@
             "introduction": "* Answer questions\r\n* Earn points\r\n* Improve MTC knowledge",
             "label": "5 Questions",
             "priority": 2,
-            "url": "/fivequestions",
-            "unlock_condition": "is_admin()"
+            "url": "/questions",
+            "unlock_condition": "True"
         }
     },
     {
@@ -366,6 +366,15 @@
             "widget": "status.DWGG",
             "enabled": true,
             "page": 10
+        }
+    },
+    {
+        "pk": 120,
+        "model": "challenge_mgr.pagesetting",
+        "fields": {
+            "widget": "questions",
+            "enabled": true,
+            "page": 2
         }
     },
     {

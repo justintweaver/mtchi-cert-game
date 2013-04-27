@@ -196,6 +196,7 @@ INSTALLED_WIDGET_APPS = (
     'my_info',
     'popular_tasks',
     'prizes',
+    'questions',
     'quests',
     'raffle',
     'scoreboard',

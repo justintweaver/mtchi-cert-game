@@ -17,6 +17,7 @@ urlpatterns = patterns('',
     # page urls
     url(r'^home/$', "apps.pages.views.index", name="home_index"),
     url(r'^help/$', "apps.pages.views.index", name="help_index"),
+    url(r'^questions/$', "apps.pages.views.index", name="questions_index"),
     url(r'^learn/$', "apps.pages.views.index", name="learn_index"),
     url(r'^profile/$', "apps.pages.views.index", name="profile_index"),
     url(r'^energy/$', "apps.pages.views.index", name="energy_index"),
