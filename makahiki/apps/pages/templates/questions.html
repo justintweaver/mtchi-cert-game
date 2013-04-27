@@ -1,0 +1,22 @@
+{% extends "logged_in_base.html" %}
+
+{% block page_title %}
+    Questions Game
+{% endblock %}
+
+{% block selected_icon %}selected-news{% endblock %}
+
+{% block extra_head %}
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                {% for template in view_objects.left_templates %}
+                    {% include template %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

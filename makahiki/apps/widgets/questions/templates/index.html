@@ -1,8 +1,10 @@
 <div class="content-box">
     <div class="content-box-title">
-        Widget name
+        Questions Game
     </div>
     <div class="content-box-contents">
-        Widget content
+        {% for q in view_objects.questions.questions %}
+            <p>{{ q.question }}</p>
+        {% endfor %}
     </div>
 </div>

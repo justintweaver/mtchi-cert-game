@@ -1,0 +1,26 @@
+[
+    {
+        "pk": 1,
+        "model": "questions.question",
+        "fields": {
+            "type": "SINGLE",
+            "text": "This is a sample multiple choice single answer question"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "questions.question",
+        "fields": {
+            "type": "MULTI",
+            "text": "This is a sample multiple choice multiple answer question"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "questions.question",
+        "fields": {
+            "type": "MATCH",
+            "text": "This is a sample matching question"
+        }
+    }
+]
