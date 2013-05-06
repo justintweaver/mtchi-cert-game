@@ -292,8 +292,8 @@ footer span.ribbon-outer {
 footer span.ribbon-inner {
   position: relative;
   display: block;
-  background-color: #cd596b;
-  border: 2px solid #7c334f;
+  background-color: #1B6E3F;
+  border: 2px solid #E6C591;
   padding: 1px;
   z-index: 1;
 }
