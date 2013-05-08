@@ -1,17 +1,44 @@
 {% extends "logged_in_base.html" %}
 
+
 {% block page_title %}
     Home
 {% endblock %}
 
-{% block selected_icon %}selected-home{% endblock %}
 
-{% block extra_head %} 
-    <script src="{{STATIC_URL}}js/jquery.form.2.43.js" type="text/javascript"></script>
+{% block body %}
+
+<div class="container">
+      <div class="row">
+        <div class="span3 text-center">
+          <img src="https://s3.amazonaws.com/makahiki_jtw/static/images/old-logo.png"
+          class="img-rounded"> 
+        </div>
+        <div class="span6 text-center">
+          <h1>SimStim Struggle</h1>
+          <h4>The Hawaii Mission Training Complex Certification Game!</h4>
+        </div>
+        <div class="span3 text-center">
+          <a href="{% url account_logout %}"><h4>Logout</h4></a> 
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="span12 pagination pagination-centered" style="background-color:tan;">
+          <a class="btn sss-nav-btn btn-success btn-large">Five Questions</a>
+          <a class="btn btn-success btn-large sss-nav-btn">Challenges</a>
+          <a class="btn btn-success btn-large sss-nav-btn">Contribute</a>
+          <a class="btn btn-success btn-large sss-nav-btn">Scoreboard</a>
+          <a class="btn btn-success btn-large sss-nav-btn">Admin</a> 
+        </div>
+      </div>
+    </div>
+    
 {% endblock %}
 
-{% block body %} 
-    <div class="homecontent">
-        {% include "widgets/home/templates/index.html" %}
-    </div> 
-{% endblock %}
+
+
+  
+    
+  
