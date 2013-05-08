@@ -55,14 +55,14 @@
           class="img-rounded"> 
         </p>
         <h1 style="text-align:center;">SimStim Struggle</h1>
-        <a class="btn btn-block btn-inverse btn-large" href="#"><span class="btn-label">Sign Up Today!</span></a>
+        <a class="btn btn-block btn-inverse btn-large disabled" href="#"><span class="btn-label">Sign Up Today!</span></a>
         <h4>Already have an account? Log in...</h4>
-        <form class="login visible-phone form-inline" method="POST" action="{% url account_login %}">
+        <form class="login form-inline visible-phone" method="POST" action="{% url account_login %}">
             {% csrf_token %}
             {{ form.as_p }}
-          <input type="text" class="input-small" placeholder="Username">
-          <input type="password" class="input-small" placeholder="Password" style="">
-          <button type="submit" class="btn btn-success">Sign in</button>
+            <input id="id_username" name="username" type="text" class="input-small" placeholder="Username">
+            <input id="id_password" name="password" type="password" class="input-small" placeholder="Password">
+            <button type="submit" class="btn btn-success">Sign in</button>
         </form>
       </div>
       <div class="row main-features">
