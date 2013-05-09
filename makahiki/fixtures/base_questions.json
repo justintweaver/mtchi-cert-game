@@ -4,23 +4,319 @@
         "model": "questions.question",
         "fields": {
             "type": "SINGLE",
-            "text": "This is a sample multiple choice single answer question"
+            "text": "What is the maximum number of host IP addresses in a class C network?"
         }
     },
     {
         "pk": 2,
         "model": "questions.question",
         "fields": {
-            "type": "MULTI",
-            "text": "This is a sample multiple choice multiple answer question"
+            "type": "SINGLE",
+            "text": "On network diagrams, WAN link speeds are measured in?"
         }
     },
     {
         "pk": 3,
         "model": "questions.question",
         "fields": {
-            "type": "MATCH",
-            "text": "This is a sample matching question"
+            "type": "SINGLE",
+            "text": "SIMPLE is to ERF as ____?____ is to MRF?"
         }
-    }
+    },
+    {
+        "pk": 4,
+        "model": "questions.question",
+        "fields": {
+            "type": "SINGLE",
+            "text": "Data Distribution Service (DDS) replaced ____?____ ."
+        }
+    }, 
+    {
+        "pk": 5,
+        "model": "questions.question",
+        "fields": {
+            "type": "SINGLE",
+            "text": "What is the resolution of a quad screen in the ECF?"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "questions.question",
+        "fields": {
+            "type": "SINGLE",
+            "text": "A point to point network has ____?____ hosts and is a ____?____ network."
+        }
+    },
+    {
+        "pk": 7,
+        "model": "questions.question",
+        "fields": {
+            "type": "SINGLE",
+            "text": "To send messages from ERF to FBCB2, configure the ____?____ message tab in SIMPLE."
+        }
+    },
+    {
+        "pk": 8,
+        "model": "questions.question",
+        "fields": {
+            "type": "SINGLE",
+            "text": "The Information Assurance control related to preventing compromising emanations from data transmissions is known as ____?____ ."
+        }
+    },
+    	{
+		"pk": 1,
+		"model": "questions.answer",
+		"fields": {
+			"question": 1,
+			"answer": "255"
+		}
+	},
+	{
+		"pk": 2,
+		"model": "questions.answer",
+		"fields": {
+			"question": 1,
+			"answer": "256"
+		}
+	},
+	{
+		"pk": 3,
+		"model": "questions.answer",
+		"fields": {
+			"question": 1,
+			"answer": "54"
+		}
+	},
+	{
+		"pk": 4,
+		"model": "questions.answer",
+		"fields": {
+			"question": 1,
+			"answer": "200"
+		}
+	},
+	{
+		"pk": 5,
+		"model": "questions.answer",
+		"fields": {
+			"question": 2,
+			"answer": "Kilobits per second (Kb/s)"
+		}
+	},
+	{
+		"pk": 6,
+		"model": "questions.answer",
+		"fields": {
+			"question": 2,
+			"answer": "Megabits per second (Mb/s)"
+		}
+	},
+	{
+		"pk": 7,
+		"model": "questions.answer",
+		"fields": {
+			"question": 2,
+			"answer": "Kilobytes per second (KB/s)"
+		}
+	},
+	{
+		"pk": 8,
+		"model": "questions.answer",
+		"fields": {
+			"question": 2,
+			"answer": "Megabytes per second (MB/s)"
+		}
+	},
+	{
+		"pk": 9,
+		"model": "questions.answer",
+		"fields": {
+			"question": 3,
+			"answer": "WARSIM Intelligence Model"
+		}
+	},
+	{
+		"pk": 10,
+		"model": "questions.answer",
+		"fields": {
+			"question": 3,
+			"answer": "JCATS"
+		}
+	},
+	{
+		"pk": 11,
+		"model": "questions.answer",
+		"fields": {
+			"question": 3,
+			"answer": "Battle Space Workstation"
+		}
+	},
+	{
+		"pk": 12,
+		"model": "questions.answer",
+		"fields": {
+			"question": 3,
+			"answer": "C2 Adapter"
+		}
+	},
+	{
+		"pk": 13,
+		"model": "questions.answer",
+		"fields": {
+			"question": 4,
+			"answer": "Publish and Subscribe Service (PASS)"
+		}
+	},
+	{
+		"pk": 14,
+		"model": "questions.answer",
+		"fields": {
+			"question": 4,
+			"answer": "Command Post of the Future (CPOF)"
+		}
+	},
+	{
+		"pk": 15,
+		"model": "questions.answer",
+		"fields": {
+			"question": 4,
+			"answer": "All-Source Analysis System (ASAS)"
+		}
+	},
+	{
+		"pk": 16,
+		"model": "questions.answer",
+		"fields": {
+			"question": 4,
+			"answer": "Global Command Data Service (GCDS)"
+		}
+	},
+	{
+		"pk": 17,
+		"model": "questions.answer",
+		"fields": {
+			"question": 5,
+			"answer": "1920 x 1080"
+		}
+	},
+	{
+		"pk": 18,
+		"model": "questions.answer",
+		"fields": {
+			"question": 5,
+			"answer": "4000 x 2000"
+		}
+	},
+	{
+		"pk": 19,
+		"model": "questions.answer",
+		"fields": {
+			"question": 5,
+			"answer": "3840 x 2160"
+		}
+	},
+	{
+		"pk": 20,
+		"model": "questions.answer",
+		"fields": {
+			"question": 5,
+			"answer": "1280 x 1024"
+		}
+	},
+	{
+		"pk": 21,
+		"model": "questions.answer",
+		"fields": {
+			"question": 6,
+			"answer": "4 , /32"
+		}
+	},
+	{
+		"pk": 22,
+		"model": "questions.answer",
+		"fields": {
+			"question": 6,
+			"answer": "2 , /32"
+		}
+	},
+	{
+		"pk": 23,
+		"model": "questions.answer",
+		"fields": {
+			"question": 6,
+			"answer": "4 , /30"
+		}
+	},
+	{
+		"pk": 24,
+		"model": "questions.answer",
+		"fields": {
+			"question": 6,
+			"answer": "2 , /30"
+		}
+	},
+	{
+		"pk": 25,
+		"model": "questions.answer",
+		"fields": {
+			"question": 7,
+			"answer": "OTH-GOLD"
+		}
+	},
+	{
+		"pk": 26,
+		"model": "questions.answer",
+		"fields": {
+			"question": 7,
+			"answer": "JVMF"
+		}
+	},
+	{
+		"pk": 27,
+		"model": "questions.answer",
+		"fields": {
+			"question": 7,
+			"answer": "TDL"
+		}
+	},
+	{
+		"pk": 28,
+		"model": "questions.answer",
+		"fields": {
+			"question": 7,
+			"answer": "USMTF"
+		}
+	},
+	{
+		"pk": 29,
+		"model": "questions.answer",
+		"fields": {
+			"question": 8,
+			"answer": "Security Technical Implementation Guides (STIGs)"
+		}
+	},
+	{
+		"pk": 30,
+		"model": "questions.answer",
+		"fields": {
+			"question": 8,
+			"answer": "Access Control Lists (ACLs)"
+		}
+	},
+	{
+		"pk": 31,
+		"model": "questions.answer",
+		"fields": {
+			"question": 8,
+			"answer": "Intrusion Detection"
+		}
+	},
+	{
+		"pk": 32,
+		"model": "questions.answer",
+		"fields": {
+			"question": 8,
+			"answer": "TEMPEST"
+		}
+	}
 ]

@@ -1,22 +1,88 @@
 {% extends "logged_in_base.html" %}
 
+
 {% block page_title %}
-    Questions Game
+    SimStim Struggle: Questions Game
 {% endblock %}
 
-{% block selected_icon %}selected-news{% endblock %}
-
-{% block extra_head %}
-{% endblock %}
 
 {% block body %}
-    <div class="container-fluid">
-        <div class="row-fluid">
-            <div class="span12">
-                {% for template in view_objects.left_templates %}
-                    {% include template %}
-                {% endfor %}
-            </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="span3 text-center">
+          <img src="https://s3.amazonaws.com/makahiki_jtw/static/images/old-logo.png"
+          class="img-rounded"> 
         </div>
+        <div class="span6 text-center">
+          <h1>SimStim Struggle</h1>
+          <h4>The Hawaii Mission Training Complex Certification Game!</h4>
+        </div>
+        <div class="span3 text-center">
+          <a href="{% url account_logout %}"><h4>Logout</h4></a> 
+        </div>
+      </div>
     </div>
+    <div class="container">
+      <div class="row">
+        <div class="span12 pagination pagination-centered" style="background-color:tan;">
+          <a class="btn sss-nav-btn btn-warning btn-large">Five Questions</a>
+          <a class="btn btn-success btn-large sss-nav-btn disabled">Challenges</a>
+          <a class="btn btn-success btn-large sss-nav-btn disabled">Contribute</a>
+          <a class="btn btn-success btn-large sss-nav-btn disabled">Scoreboard</a>
+          <a class="btn btn-success btn-large sss-nav-btn disabled">Admin</a> 
+        </div>
+      </div>
+    </div>
+    
+    <!-- Begin questions -->    
+    <div class="container">
+      <div class="row">
+        <div class="span8 offset1">
+        
+          <form>            
+          {% for q in view_objects.questions.questions %}
+            <div id="question{{ q.number }}" {% if q.number > 0 %}style="display: none"{% endif %}>
+          
+            <!--  Multiple-choice, single-answer questions -->
+            {% if q.type == "SINGLE" %}
+                <h3>{{ q.question }}</h3>
+                {% for a in q.answers %}
+                    <label class="radio">
+                        <input type="radio" name="optionsRadios{{ q.number }}" id="optionsRadios{{ forloop.counter0 }}" value="option{{ forloop.counter0 }}">{{ a }}
+                    </label>
+                
+                {% endfor %}           
+                
+            <!--  Multiple-choice, multiple-answer questions -->                                
+            {% elif q.type == "MULTI" %}
+                <h3>{{ q.question }}</h3>
+                            
+            <!--  Matching questions -->            
+            {% elif q.type == "MATCH" %}            
+                <h3>{{ q.question }}</h3>
+                
+            {% endif %} 
+            
+            <!-- Write Next button or Finish button -->
+            {% if q.number < 4 %}
+                <a class="btn btn-warning btn-large" onclick="
+                    var elem = document.getElementById('question{{q.number}}');
+                    $(elem).hide();
+                    var elem = document.getElementById('question{{q.number|add:"1"}}');
+                    $(elem).show();
+                    ">Next &gt;
+                </a>
+                {% else %}
+                <a href="../questions/" class="btn btn-success btn-large">Finish!</a>     
+            {% endif %}       
+            
+            </div>  
+          {% endfor %}
+          
+          </form>
+        </div>
+      </div>
+     </div>
+    
 {% endblock %}

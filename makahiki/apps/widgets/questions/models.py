@@ -44,6 +44,8 @@ class CorrectMultipleAnswers(models.Model):
     
 class MatchingChoices(models.Model):
     """MatchingChoices model"""
+    question = models.ForeignKey('Question')
+    
     given = models.CharField(max_length = 1023)
     
     match = models.CharField(max_length = 1023)
